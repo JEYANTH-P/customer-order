@@ -1,6 +1,5 @@
-package com.ecom.customer_order.Models;
+package com.ecom.customer_order.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,11 +13,10 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private String name;
     private String email;
 
-/*    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     @JsonManagedReference
-    private List<Order> orders;*/
+    private List<Order> orders;
 }
